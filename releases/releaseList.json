@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "0",
+    "Name": "WpfKb 0.1.0.0",
+    "DevelopmentStatus": "Stable",
+    "Description": "This is the initial release of WpfKb which is stable as far as functionality, but in its infancy with regard to customisation. The keyboard control itself is stable, but all configuration and layout is currently achieved in code. There is no way to define a control template or styling for keys etc.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2009-12-22T20:05:48.257-08:00",
+    "Files": [
+      {
+        "Id": "11df7000-b967-44f7-a454-cc78c2f0fb2f",
+        "FileName": "WpfKb.0.1.0.0-bin.zip",
+        "Url": "./0/11df7000-b967-44f7-a454-cc78c2f0fb2f",
+        "Type": "Application",
+        "UploadDate": "2009-12-22T20:05:47.913-08:00"
+      },
+      {
+        "Id": "3fe4b028-4b29-40e5-8df9-f19716b76ccd",
+        "FileName": "WpfKb.0.1.0.0-src.zip",
+        "Url": "./0/3fe4b028-4b29-40e5-8df9-f19716b76ccd",
+        "Type": "Source Code",
+        "UploadDate": "2009-12-22T20:05:48.007-08:00"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1091099",
+    "ThreadId": "456502",
+    "Html": "Can anyone tell me what is the corresponding virtual keycode for German AltGr key. AltGr key is a substitute to Ctrl+Alt in German. \r<br />\n<br />\nCtrl+Alt=AltGr.\r<br />\n<br />\nIt gives some more letters in the german keyboard like @,€,µ in some keys.<br />\n",
+    "PostedDate": "2013-09-11T04:46:53.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1151289",
+    "ThreadId": "456502",
+    "Html": "Bit late to come to the party but on my keyboard AltGr is VirtualKeyCode.RMENU<br />\n",
+    "PostedDate": "2014-01-09T03:47:07.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello All,\r\nI want to reset position of Keyboard down to TextBoxes As i shown in image attached. I want to fix it permanently for all type of screen resolutions.\r\n\r\nThanks\r\nJazaib",
+    "LastUpdatedDate": "2013-06-22T12:50:46.897-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "wpfkb",
+    "ReportedDate": "2013-06-22T12:50:46.727-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "How to Set Keyboard Position Down To TextBoxes",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 1
+  },
+  "FileAttachments": [
+    {
+      "FileId": 695726,
+      "FileName": "KEYBOARD.jpg",
+      "DownloadUrl": ".\\695726"
+    }
+  ],
+  "Comments": []
+}

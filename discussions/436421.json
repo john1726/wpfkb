@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1014436",
+    "ThreadId": "436421",
+    "Html": "Hello,\r<br />\n<br />\ni'm going crazy by trying to close a Dialog Window on Enter Button now for 3 days and now i have no idea anymore how to solve the Problem.\r<br />\n<br />\nI'm using the OnScreenKeyboard Control in a WPF Window to enter the username and password. I call the Window with ShowDialog(). When the User press the Enter-button, i send the information through WCF and then i want to close the window, but the Window appears again and again and again ... I tried window.close() and Dialogresult = true inside the control and also inside the window.\r<br />\n<br />\nIs there anyone who could help me ?\r<br />\n<br />\nMany thanks in advance,\r<br />\nCaipi<br />\n",
+    "PostedDate": "2013-03-13T02:11:25.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

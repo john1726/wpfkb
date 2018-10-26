@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "440034",
+    "ThreadId": "211835",
+    "Html": "At first the very powerful project. Get to the point how about to change layout labels to a current keyboard layout?",
+    "PostedDate": "2010-05-06T12:35:39.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "440057",
+    "ThreadId": "211835",
+    "Html": "Hi ljuk,<div><br></div><div>At the moment to change the keyboard layout you just need to download the source code and look at the C# code that declares each of the keys into a different row of the keyboard grid.  It's actually quite easy when you see how the code is structure, it's just not yet very intuitive to do using a declarative XAML markup.</div>\r\n<div><br></div><div>As for multilingual that shouldn't be any problem as long as you hook up the right VirtualKeyCode for each key on the non-english keyboard, which might take some research interpreting which VirtualKeyCode represents which extended key.</div>\r\n<div><br></div><div>Hope that helps.</div><div>Mike</div>",
+    "PostedDate": "2010-05-06T13:14:40.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "451015",
+    "ThreadId": "211835",
+    "Html": "Thank you, Mike!",
+    "PostedDate": "2010-06-02T23:32:38.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452258",
+    "ThreadId": "211835",
+    "Html": "<span style=\"font-family:arial, sans-serif;font-size:13px;border-collapse:collapse\">Hi,<div><br></div><div>Can you give me any more details?</div><div><br></div><div>The keyboard simply calls the SendInput method with the specified VirtualKey code (VK code). The reality is that I didn't have a good test case for multilingual support at the time.</div>\r\n<div><br></div><div>If you can send me through the sample code file/project, I can help you from there.</div><div><br></div><div>Cheers,</div><div>Mike</div></span><br><div>On Thu, Jun 3, 2010 at 4:32 PM, ljuk <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex\">   <div> <p>From: ljuk</p> <div>Thank you, Mike!</div> <div> <p>Read the <a href=\"http://wpfkb.codeplex.com/Thread/View.aspx?ThreadId=211835&ANCHOR#Post451015\">full discussion online</a>.</p>\r\n <p>To add a post to this discussion, reply to this email (<a href=\"mailto:wpfkb@discussions.codeplex.com?subject=[wpfkb:211835]\">wpfkb@discussions.codeplex.com</a>)</p> <p>To start a new discussion for this project, email <a href=\"mailto:wpfkb@discussions.codeplex.com\">wpfkb@discussions.codeplex.com</a></p>\r\n <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"https://wpfkb.codeplex.com/subscriptions/thread/project/edit\">unsubscribe or change your settings</a> on codePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at <a href=\"http://codeplex.com\">codeplex.com</a></p> </div> </div> </blockquote>\r\n</div><br>",
+    "PostedDate": "2010-06-06T17:26:02.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "706176",
+    "ThreadId": "211835",
+    "Html": "<p>Hi Mike,</p>\n<p>great work and it looks beautiful ;)</p>\n<p>I'm trying to use it with german layout, but I'm a bit confused with changing it,hmm.</p>\n<p>When chaning</p>\n<div style=\"color: black; background-color: white;\">\n<pre><span style=\"color: blue;\">new</span> ShiftSensitiveKey(VirtualKeyCode.VK_2, <span style=\"color: blue;\">new</span> List&lt;<span style=\"color: blue;\">string</span>&gt; { <span style=\"color: #a31515;\">\"2\"</span>, <span style=\"color: #a31515;\">\"@\"</span> }\n</pre>\n</div>\n<p>&nbsp;</p>\n<p>to</p>\n<p>&nbsp;</p>\n<div style=\"color: black; background-color: white;\">\n<pre><span style=\"color: blue;\">new</span> ShiftSensitiveKey(VirtualKeyCode.VK_2, <span style=\"color: blue;\">new</span> List&lt;<span style=\"color: blue;\">string</span>&gt; { <span style=\"color: #a31515;\">\"2\"</span>, <span style=\"color: #a31515;\">\"\\\"\"</span> }\n</pre>\n</div>\n<p>&nbsp;</p>\n<p>the desired key is sent but with wrong symbol in xaml.</p>\n<p>I think I've to use it with the right codes from winuser.h which is within the project or I am totally doing the wrong way?</p>\n<p>&nbsp;</p>\n<p>Thanks for help</p>",
+    "PostedDate": "2011-12-01T17:01:05.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "706182",
+    "ThreadId": "211835",
+    "Html": "Hey Bjorn,\r\n<div><br>\r\n</div>\r\n<div>It looks like you're doing the right thing. The first parameter is the VirtualKeyCode that will be sent using InputSimulator when that key is pressed, and as you said, the right data is being simulated. The second paramter is the characters that get rendered\r\n in the XAML. The first in the list is when the key is in its natural state, and the second is when the key is in the modified state (ie; shift).</div>\r\n<div><br>\r\n</div>\r\n<div>Can you try creating a standard (non-shift sensitive) key with the symbology you want and see what happens?</div>\r\n<div><br>\r\n</div>\r\n<div>Cheers,</div>\r\n<div>Mike<br>\r\n<br>\r\n<div>On Fri, Dec 2, 2011 at 11:01 AM, supaburn <span dir=\"ltr\">&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0 0 0 .8ex; border-left:1px #ccc solid; padding-left:1ex\">\r\n<div>\r\n<p>From: supaburn</p>\r\n<div>\r\n<p>Hi Mike,</p>\r\n<p>great work and it looks beautiful!</p>\r\n<p>I'm trying to use it with german layout, but I'm a bit confused with changing it,hmm.</p>\r\n<p>When chaning new </p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">new</span> ShiftSensitiveKey(VirtualKeyCode.VK_2, <span style=\"color:blue\">new</span> List&lt;<span style=\"color:blue\">string</span>&gt; { <span style=\"color:#a31515\">&quot;2&quot;</span>, <span style=\"color:#a31515\">&quot;@&quot;</span> }\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>to</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">new</span> ShiftSensitiveKey(VirtualKeyCode.VK_2, <span style=\"color:blue\">new</span> List&lt;<span style=\"color:blue\">string</span>&gt; { <span style=\"color:#a31515\">&quot;2&quot;</span>, <span style=\"color:#a31515\">&quot;\\&quot;&quot;</span> }\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>the desired key is sent but with wrong symbol in xaml.</p>\r\n<p>I think I've to use it with the right codes from winuser.h which is within the project or I am totally doing the wrong way?</p>\r\n<p></p>\r\n<p>Thanks for help</p>\r\n<p>Björn</p>\r\n</div>\r\n<div>\r\n<p>Read the <a href=\"http://wpfkb.codeplex.com/discussions/211835#post706176\" target=\"_blank\">\r\nfull discussion online</a>.</p>\r\n<p>To add a post to this discussion, reply to this email (<a href=\"mailto:wpfkb@discussions.codeplex.com?subject=[wpfkb:211835]\" target=\"_blank\">wpfkb@discussions.codeplex.com</a>)</p>\r\n<p>To start a new discussion for this project, email <a href=\"mailto:wpfkb@discussions.codeplex.com\" target=\"_blank\">\r\nwpfkb@discussions.codeplex.com</a></p>\r\n<p>You are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://wpfkb.codeplex.com/subscriptions/thread/project/edit\" target=\"_blank\">\r\nunsubscribe or change your settings</a> on codePlex.com.</p>\r\n<p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at\r\n<a href=\"http://codeplex.com\" target=\"_blank\">codeplex.com</a></p>\r\n</div>\r\n</div>\r\n</blockquote>\r\n</div>\r\n<br>\r\n</div>\r\n",
+    "PostedDate": "2011-12-01T17:19:03.42-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "706188",
+    "ThreadId": "211835",
+    "Html": "<p>Thanks for your quick answer Mike.</p>\n<p>and WinUser.h delievers the right key code? For example, I searched for VirtualKeyCode.OEM_3 in winuser and found VK_OEM_3 with 0xC0.</p>\n<p>So I tried this:</p>\n<p>new VirtualKey(VirtualKeyCode. \"@\")</p>\n<p>I'm still searching for the right keycode @ in VirtualKeyCode enumeration.</p>",
+    "PostedDate": "2011-12-01T18:09:38.52-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

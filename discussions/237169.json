@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "531254",
+    "ThreadId": "237169",
+    "Html": "\r\n<p>How can I show this keyboard at windows login screen?</p>\r\n",
+    "PostedDate": "2010-12-04T21:03:58.787-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "531466",
+    "ThreadId": "237169",
+    "Html": "Hi,\r\n<div><br>\r\n</div>\r\n<div>I found a couple of possible solutions after a quick search on the web, maybe give them a try using the built-in windows on-screen keyboard, and then try swapping it out for the wpf on screen keyboard.</div>\r\n<div><br>\r\n</div>\r\n<div><a href=\"http://forums.techarena.in/customize-desktop/1131979.htm\">http://forums.techarena.in/customize-desktop/1131979.htm</a></div>\r\n<div><br>\r\n</div>\r\n<div>For Windows Vista onwards, you need to be aware that the keyboard application must run at equal or higher trust than the target application, otherwise the INPUT messages will be ignored. In this case you may find that the built-in windows keyboard works,\r\n but you custom one won't.</div>\r\n<div><br>\r\n</div>\r\n<div>Let me know how you go.</div>\r\n<div><br>\r\n</div>\r\n<div>Cheers,</div>\r\n<div>Mike</div>\r\n<div><br>\r\n<div>On Sun, Dec 5, 2010 at 3:04 PM, bienca101 <span dir=\"ltr\">&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0 0 0 .8ex; border-left:1px #ccc solid; padding-left:1ex\">\r\n<div>\r\n<p>From: bienca101</p>\r\n<div>\r\n<p>How can I show this keyboard at windows login screen?</p>\r\n</div>\r\n<div>\r\n<p>Read the <a href=\"http://wpfkb.codeplex.com/Thread/View.aspx?ThreadId=237169&ANCHOR#Post531254\" target=\"_blank\">\r\nfull discussion online</a>.</p>\r\n<p>To add a post to this discussion, reply to this email (<a href=\"mailto:wpfkb@discussions.codeplex.com@discussions.codeplex.com?subject=[wpfkb:237169]\" target=\"_blank\">wpfkb@discussions.codeplex.com@discussions.codeplex.com</a>)</p>\r\n<p>To start a new discussion for this project, email <a href=\"mailto:wpfkb@discussions.codeplex.com@discussions.codeplex.com\" target=\"_blank\">\r\nwpfkb@discussions.codeplex.com@discussions.codeplex.com</a></p>\r\n<p>You are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://wpfkb.codeplex.com/subscriptions/thread/project/edit\" target=\"_blank\">\r\nunsubscribe or change your settings</a> on codePlex.com.</p>\r\n<p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at\r\n<a href=\"http://codeplex.com\" target=\"_blank\">codeplex.com</a></p>\r\n</div>\r\n</div>\r\n</blockquote>\r\n</div>\r\n<br>\r\n</div>\r\n",
+    "PostedDate": "2010-12-05T14:58:46.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

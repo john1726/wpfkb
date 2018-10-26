@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 3,
+    "Custom": null,
+    "Description": "Hello all\r\nI want to set the position of keyboard througth paramaters any idea could help me ?",
+    "LastUpdatedDate": "2013-08-06T10:50:07.867-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "wpfkb",
+    "ReportedDate": "2013-07-09T16:46:26.2-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "How can set the position ",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 2
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi, \n\nYou can use the positioning from Popups:\nhttp://msdn.microsoft.com/en-us/library/bb613596.aspx#Positioning\n\nIn this link everything is explained very well. You can see what PlacementTarget means, and how to place the keyboard around a placementtarget. \n\nKind regards,",
+      "PostedDate": "2013-08-06T01:08:51.587-07:00",
+      "Id": 108632
+    },
+    {
+      "Message": "Thank you very useful the link",
+      "PostedDate": "2013-08-06T09:15:21.18-07:00",
+      "Id": 108669
+    },
+    {
+      "Message": "I have another question can i add an image for example in the keypad how can i add one image for the numer 1,2,3, ect. or any idea ? ",
+      "PostedDate": "2013-08-06T10:50:07.867-07:00",
+      "Id": 108684
+    }
+  ]
+}

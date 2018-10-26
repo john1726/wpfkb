@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "420912",
+    "ThreadId": "205884",
+    "Html": "<p>I was very &nbsp;happy to find this code but it does miss many things and i was wondering if an update is planned.<span style=\"white-space:pre\"> </span></p>",
+    "PostedDate": "2010-03-21T03:08:31.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "428147",
+    "ThreadId": "205884",
+    "Html": "<p>Hi Nick,</p>\r\n<p>At the moment I just wanted to provide an as-is version of the code for other similar projects to the one the keyboard was originally written for.</p>\r\n<p>Which things do you think it is missing and would help you most of all with your particular situation?</p>\r\n<p>I would hope that over the next several months I'll refactor the styling aspect of the control, but this is really a background task for me.</p>\r\n<p>Feel&nbsp;free to contribute to the project by posting a patch if you'd like to help.</p>\r\n<p>Kind Regards,<br>Mike</p>",
+    "PostedDate": "2010-04-06T22:37:47.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

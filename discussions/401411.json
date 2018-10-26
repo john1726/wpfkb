@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "934715",
+    "ThreadId": "401411",
+    "Html": "\r\n<p>Ok, i hosted the control in winform, but i have a serious memory leak, with it. Every form closing and recreating increases the memory usage with 5000K. I removed the elementhost, and after that leak stopped so I'm sure the problem is in the elementhost,\r\n or the wpf usercontrol. So what can i do for stopping the memory leak?</p>\r\n<p>Thanks: Peter</p>\r\n",
+    "PostedDate": "2012-10-31T05:55:49.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "935005",
+    "ThreadId": "401411",
+    "Html": "<p>Hi Peter,</p>\r\n<p>There's nothing specific about the control that I can think of where memory is leaked. &nbsp;The best recommendation I can make is to use a memory profiler to figure out what is holding on to the object instances - typically event handlers.</p>\r\n<p>If you find an issue in the control itself I'd be happy to fix it!</p>\r\n<p>Mike</p>",
+    "PostedDate": "2012-10-31T14:23:38.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1004333",
+    "ThreadId": "401411",
+    "Html": "michaelnoonan\r<br />\n<br />\nspeti is totally right, there is really huge leak,\r<br />\nfirst of all, ofcourse thanks for this project and for sharing with us,\r<br />\nim using this project in commercial app,\r<br />\nthis app have to be run 24/h so any memory leaks are totally unnacceptable,\r<br />\ni have been working a little with memory profiler to figure out whats goin on and i found where memory is leaking,\r<br />\nin your autohidebehavior class you are using dispatcher timer and you never shut down this dispatcher, so autobehavior class still keepeing pointer to entire floatingtouchscreenkeyboard,\r<br />\n<br />\nofcourse i figure out how to solve this problem and im shutting down dispatcher timers (each floatingkeyb class keeps two autobehavior classes) and in memory left only static values which is totally allright, and no more memory leaking\r<br />\nif anyone is interested i can prepare patch for this project\r<br />\nthanks<br />\n",
+    "PostedDate": "2013-02-20T17:18:27.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1015646",
+    "ThreadId": "401411",
+    "Html": "<strong>brt wrote:</strong><br />\n<blockquote>\nmichaelnoonan<br />\n<br />\nspeti is totally right, there is really huge leak,<br />\nfirst of all, ofcourse thanks for this project and for sharing with us,<br />\nim using this project in commercial app,<br />\nthis app have to be run 24/h so any memory leaks are totally unnacceptable,<br />\ni have been working a little with memory profiler to figure out whats goin on and i found where memory is leaking,<br />\nin your autohidebehavior class you are using dispatcher timer and you never shut down this dispatcher, so autobehavior class still keepeing pointer to entire floatingtouchscreenkeyboard,<br />\n<br />\nofcourse i figure out how to solve this problem and im shutting down dispatcher timers (each floatingkeyb class keeps two autobehavior classes) and in memory left only static values which is totally allright, and no more memory leaking<br />\nif anyone is interested i can prepare patch for this project<br />\nthanks<br />\n</blockquote>\nA patch would be great.  Thanks.<br />\n",
+    "PostedDate": "2013-03-14T18:12:26.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

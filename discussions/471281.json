@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1129492",
+    "ThreadId": "471281",
+    "Html": "Hello I want to simulate some special symbols(like ß, ü, ö, ä) as string keys. But if I write the code like this,<br />\n<pre><code>new OnScreenKey { GridRow = 4, GridColumn = 1, Key =  new StringKey(&quot;ß&quot;, &quot;ß&quot;)},\nnew OnScreenKey { GridRow = 4, GridColumn = 2, Key =  new StringKey(&quot;ä&quot;, &quot;ä&quot;)},</code></pre>\n\nThen during output, it always comes as '?' The desired letter does not come.\r<br />\n<br />\nCan anyone help me and let me know if I am missing anything.\r<br />\n<br />\nRegards\r<br />\nAvik Sen<br />\n",
+    "PostedDate": "2013-11-27T01:29:30.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1131126",
+    "ThreadId": "471281",
+    "Html": "\r\n<div dir=\"ltr\">Hi Avik,\r\n<div><br>\r\n</div>\r\n<div>Are you using the code for version 2? It has better support for full unicode and some tests that show how the input looks on your system. Is it possible the font doesn't support those characters?</div>\r\n<div><br>\r\n</div>\r\n<div>Cheers,</div>\r\n<div>Mike</div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-12-02T21:11:17.403-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1131586",
+    "ThreadId": "471281",
+    "Html": "Hi Mike,\r<br />\n<br />\nThanks for your advice. Can you let me know the link from where I can get the version 2.\r<br />\n<br />\nThe source code i am refering is uploaded on Dec 23, 2009. I am not sure if you are refering to this or any other version.\r<br />\n<br />\nRegards\r<br />\nAvik Sen<br />\n",
+    "PostedDate": "2013-12-04T00:54:57.537-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1136941",
+    "ThreadId": "471281",
+    "Html": "\r\n<div dir=\"ltr\">Ah, sorry. The best bet at the moment is to grab the source code for WPFKB and then update it use the InputSimulator nuget:\r\n<span style=\"color:rgb(37,51,64); font-family:'Segoe UI',Tahoma,Arial,Helvetica,sans-serif; font-size:13px; line-height:19.015625px\">\r\nInstall-Package InputSimulator</span>\r\n<div><span style=\"color:rgb(37,51,64); font-family:'Segoe UI',Tahoma,Arial,Helvetica,sans-serif; font-size:13px; line-height:19.015625px\"><br>\r\n</span></div>\r\n<div><span style=\"color:rgb(37,51,64); font-family:'Segoe UI',Tahoma,Arial,Helvetica,sans-serif; font-size:13px; line-height:19.015625px\">I haven't really kept WPFKB up to date, it is more of a sample starting place since most people grab the code and modify\r\n it anyhow.</span></div>\r\n<div><span style=\"color:rgb(37,51,64); font-family:'Segoe UI',Tahoma,Arial,Helvetica,sans-serif; font-size:13px; line-height:19.015625px\"><br>\r\n</span></div>\r\n<div><span style=\"color:rgb(37,51,64); font-family:'Segoe UI',Tahoma,Arial,Helvetica,sans-serif; font-size:13px; line-height:19.015625px\">Hope that helps.</span></div>\r\n<div><span style=\"color:rgb(37,51,64); font-family:'Segoe UI',Tahoma,Arial,Helvetica,sans-serif; font-size:13px; line-height:19.015625px\">Mike</span></div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-12-16T16:32:28.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

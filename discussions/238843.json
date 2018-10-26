@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "537696",
+    "ThreadId": "238843",
+    "Html": "\r\n<p>Hi Nice control - used it in 2 project so far and works great</p>\r\n<p>&nbsp;</p>\r\n<p>I am wondering what UniformOnScreenKeyboard, OnScreenKeyboardSection and OnScreenKey are for? &nbsp;Can we build our own keyboards with these? If Yes can you please indicate how?</p>\r\n<p>&nbsp;</p>\r\n<p>I basically need to extend your keypad by adding some keys to it like the enter key for a Point of Sales System</p>\r\n",
+    "PostedDate": "2010-12-18T05:27:09.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "538066",
+    "ThreadId": "238843",
+    "Html": "\r\n<div>Hi,</div>\r\n<div></div>\r\n<div>Great to hear its working for you.</div>\r\n<div></div>\r\n<div>The UniformOnScreenKeyboard uses a UniformGrid as the layoutpanel so all of the keys are exactly the same size, just like in the Keypad example you mentioned.</div>\r\n<div></div>\r\n<div>Yes you can create your own keyboards. The best example I can think of is to download the source code and take a look at how the OnScreenKeypad (or any of the keyboards) are built. The implementation is purely in code, it isn't a very markup-friendly control\r\n set, but it is somewhat pragmatic and very easy to roll your own keyboard from code. Let me know if you get stuck.</div>\r\n<div></div>\r\n<div>Mike<br>\r\n<br>\r\n</div>\r\n<div>On Sat, Dec 18, 2010 at 11:27 PM, exorgroup <span dir=\"ltr\">&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"border-left:#ccc 1px solid; margin:0px 0px 0px 0.8ex; padding-left:1ex\">\r\n<div>\r\n<p>From: exorgroup</p>\r\n<div>\r\n<p>Hi Nice control - used it in 2 project so far and works great</p>\r\n<p></p>\r\n<p>I am wondering what UniformOnScreenKeyboard, OnScreenKeyboardSection and OnScreenKey are for? Can we build our own keyboards with these? If Yes can you please indicate how?</p>\r\n<p></p>\r\n<p>I basically need to extend your keypad by adding some keys to it like the enter key for a Point of Sales System</p>\r\n</div>\r\n<div>\r\n<p>Read the <a href=\"http://wpfkb.codeplex.com/Thread/View.aspx?ThreadId=238843&ANCHOR#Post537696\" target=\"_blank\">\r\nfull discussion online</a>.</p>\r\n<p>To add a post to this discussion, reply to this email (<a href=\"mailto:wpfkb@discussions.codeplex.com?subject=[wpfkb:238843]\" target=\"_blank\">wpfkb@discussions.codeplex.com</a>)</p>\r\n<p>To start a new discussion for this project, email <a href=\"mailto:wpfkb@discussions.codeplex.com\" target=\"_blank\">\r\nwpfkb@discussions.codeplex.com</a></p>\r\n<p>You are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://wpfkb.codeplex.com/subscriptions/thread/project/edit\" target=\"_blank\">\r\nunsubscribe or change your settings</a> on codePlex.com.</p>\r\n<p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at\r\n<a href=\"http://codeplex.com/\" target=\"_blank\">codeplex.com</a></p>\r\n</div>\r\n</div>\r\n</blockquote>\r\n</div>\r\n<br>\r\n",
+    "PostedDate": "2010-12-19T16:53:20.26-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "538480",
+    "ThreadId": "238843",
+    "Html": "\r\n<p>I got stuck in implementing one key - I need a clear key that when press it clears the content of the text box - Similar concept like the clear key (C or CE) of a calculator? &nbsp;Any idea how this can be implemented?</p>\r\n",
+    "PostedDate": "2010-12-20T13:16:40.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "538496",
+    "ThreadId": "238843",
+    "Html": "\r\n<div>That's great. All you need to do is hook up the key to a method that will clear the value. If you are using a ViewModel you'd simply</div>\r\n<div>Clear the property on the view model. Otherwise you could clear the text box or simulate a CTRL-A followed by a delete using the InputSimulator.</div>\r\n<div><br>\r\n</div>\r\n<div>Hope that helps</div>\r\n<div>Mike<br>\r\n<br>\r\nSent from my phone</div>\r\n<div><br>\r\nOn 21/12/2010, at 7:16 AM, &quot;exorgroup&quot; &lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt; wrote:<br>\r\n<br>\r\n</div>\r\n<div></div>\r\n<blockquote type=\"cite\">\r\n<div>\r\n<p>From: exorgroup</p>\r\n<div id=\"x_x_ThreadNotificationPostBody\">\r\n<p>I got stuck in implementing one key - I need a clear key that when press it clears the content of the text box - Similar concept like the clear key (C or CE) of a calculator? Any idea how this can be implemented?</p>\r\n</div>\r\n</div>\r\n</blockquote>\r\n",
+    "PostedDate": "2010-12-20T13:55:10.183-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

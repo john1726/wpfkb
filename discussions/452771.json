@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1078079",
+    "ThreadId": "452771",
+    "Html": "Hello,<br />\n<br />\nWPF Touch Screen Keyboard is a great project, but I have found one small issue.<br />\n<br />\nWhile migrating it to .NET Framework 4.0 and 4.5 I realized that the InputSimulator.IsKeyDownAsync method which is being used in InstantaneousModifierKey class always return false. Thus the keys of type InstantaneousModifierKey does not work as expected, and the keys does not maintain proper state. Is there any other option to use in .NET Framework 4.0 and 4.5 instesd of using IsKeyDownAsync.<br />\n<br />\nRegards<br />\nAvik Sen<br />\n",
+    "PostedDate": "2013-08-07T23:25:18.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1081920",
+    "ThreadId": "452771",
+    "Html": "\r\n<div dir=\"ltr\">Sorry I didn't reply sooner. Have you had any luck with this? You could try using the newer version of InputSimulator that actually drives the WPF keyboard and see if it is more compatible.\r\n<div><br>\r\n</div>\r\n<div>Cheers,</div>\r\n<div>Mike</div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-08-18T16:24:35.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1201078",
+    "ThreadId": "452771",
+    "Html": "I debugged the InstantaneousModifierKey class and the IsInEffect variable is always set to false.<br />\n",
+    "PostedDate": "2014-01-30T11:54:55.847-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

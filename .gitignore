@@ -1,0 +1,16 @@
+/*.suo
+/*.user
+bin/
+obj/
+packages/
+*.suo
+*.user
+*.pdb
+*.cache
+*.exe
+*.dll
+**/AssemblyInfo.cs
+Publish/
+/.vs/rail_inspections/v15/sqlite3/storage.ide
+/.vs
+

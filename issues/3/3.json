@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "Hi,\r\nusing WPF Touch Screen Keyboard i cannot use IsOpen={Binding VisibilityState}\r\nany idea? thx",
+    "LastUpdatedDate": "2016-03-28T03:02:42.78-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "wpfkb",
+    "ReportedDate": "2014-02-08T05:03:54.81-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "IsOpen Binding is not working",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 3
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "got the same problem - any solution yet?",
+      "PostedDate": "2016-03-28T02:45:26-07:00",
+      "Id": 198212
+    },
+    {
+      "Message": "workaround: binding at runtime seems to work:\n\n```\nvar keyboard = (FloatingTouchScreenKeyboard) view.FindName(nameof(MainWindow.Keyboard));\nvar b = new Binding(nameof(IsKeyboardVisible)) {Source = this};\nkeyboard.SetBinding(Popup.IsOpenProperty, b);\n```",
+      "PostedDate": "2016-03-28T03:02:42.78-07:00",
+      "Id": 198215
+    }
+  ]
+}

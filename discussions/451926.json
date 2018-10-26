@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1074956",
+    "ThreadId": "451926",
+    "Html": "Hello,\r<br />\n<br />\nIf I want to change the code for German Language then I need to give the proper keycode for each onscreenkey. But I am unable to find out German Language keycodes from VirtualKeyCode enum. e.g if I change<br />\n<pre><code>new OnScreenKey { GridRow = 0, GridColumn = 1, Key =  new ShiftSensitiveKey(VirtualKeyCode.OEM_3, new List&lt;string&gt; { &quot;`&quot;, &quot;~&quot; })},\n</code></pre>\n\nto<br />\n<pre><code>new OnScreenKey { GridRow = 0, GridColumn = 1, Key =  new ShiftSensitiveKey(VirtualKeyCode.OEM_3, new List&lt;string&gt; { &quot;°&quot;, &quot;^&quot; })},\n</code></pre>\n\nthen while using the keyboard, and pressing that particular key, the &quot;~&quot; comes and not &quot;^&quot;. Is there any way I can extend this keyboard to German Language by knowing the corresponding Keycodes.\r<br />\n<br />\nI need the below layout for German Keyboard. The buttons, which I think won’t be needed or are redundant, were marked. All the others should be available:\r<br />\n<br />\n<a href=\"http://tinypic.com/r/2h4m4cp/5\" rel=\"nofollow\">http://tinypic.com/r/2h4m4cp/5</a> \r<br />\n<br />\n<img src=\"http://tinypic.com/r/2h4m4cp/5\" alt=\"Image\" />\r<br />\n<br />\nThanks\r<br />\nAvik Sen<br />\n",
+    "PostedDate": "2013-07-30T23:09:30.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1075785",
+    "ThreadId": "451926",
+    "Html": "\r\n<div dir=\"ltr\">Hi There,\r\n<div><br>\r\n</div>\r\n<div>To be honest with you I don't know. The best suggestion I've got for you is to experiment through writing a test that exercises all of the key codes with/without modifiers and capture the output character you are after. Check out the latest source code\r\n for InputSimulator where there's a test exercising text input. <a href=\"http://inputsimulator.codeplex.com\">\r\nhttp://inputsimulator.codeplex.com</a></div>\r\n<div><br>\r\n</div>\r\n<div>Cheers,</div>\r\n<div>Mike</div>\r\n</div>\r\n<div><br>\r\n<br>\r\n<div></div>\r\n</div>\r\n",
+    "PostedDate": "2013-08-01T16:09:05.25-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

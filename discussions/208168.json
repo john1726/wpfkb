@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "426855",
+    "ThreadId": "208168",
+    "Html": "<p>Hi, just tried it out in a digital signage project. When i tried this keyboard all my other keystrokes weren't working anymore. Does it hog the keyboard (rendering my physical keyboard useless) ? and is there anything i can do to avoid it?</p>",
+    "PostedDate": "2010-04-02T09:17:32.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "428143",
+    "ThreadId": "208168",
+    "Html": "<p>Hi Brian,</p>\r\n<p>I didn't have that problem on the project that I developed the keyboard for. &nbsp;I was happily working in the dev environment with a physical keyboard and touch screen keyboard working simultaneously.</p>\r\n<p>To factor out any other underlying issues, could you try testing this scenario with the sample application and see if you can use both the on screen keyboard and the physical keyboard?</p>\r\n<p>Cheers,<br>Mike&nbsp;</p>",
+    "PostedDate": "2010-04-06T22:32:19.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "429136",
+    "ThreadId": "208168",
+    "Html": "<p>Hi Michael,</p>\r\n<p>I have tried to reproduce my findings but cannot seem to verify them. I experienced that especialy the esc key was blocked - i sometimes experience it during debug builds, but never in release builds. I do not think this is in any way related to the keyboard though.</p>",
+    "PostedDate": "2010-04-09T00:39:40.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

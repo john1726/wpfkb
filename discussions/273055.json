@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "673612",
+    "ThreadId": "273055",
+    "Html": "<p>Hi,</p>\n<p>i was looking exactly for a control like this, so i wanted to give it a try. The Demo is quite good and understandable. I tried to import it to my own project.&nbsp;</p>\n<p>I do the following:</p>\n<p>1) Add the Wpfkb.dll to my project</p>\n<p>2) add the namespace : xmlns:wpfkb=\"clr-namespace:Wpfkb.Controls;assembly=Wpfkb\"</p>\n<p>3) add the component in xaml:</p>\n<p>&lt;wpfkb:FloatingTouchScreenKeyboard &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n<p>DataContext=\"{Binding Main,Source={StaticResource Locator}}\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>x:Name=\"Keyboard\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>IsOpen=\"{Binding showKeyboard}\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>Width=\"900\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>Height=\"400\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>PlacementTarget=\"{Binding ElementName=window}\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>Placement=\"Center\"&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>IsAllowedToFade=\"False\"/&gt;</p>\n<p>&nbsp;</p>\n<p>Regardless, if the isAllowedToFade is set to True or False. After i move the control a little, it fades out after about 5 Seconds.&nbsp;</p>\n<p>Even when setting the KeyboardHideDelay to 0 or 500, it fades out after 5 seconds. Am I missing something?</p>\n<p>&nbsp;</p>\n<p>Regards, Steve</p>\n<p>&nbsp;</p>\n<p>EDIT:&nbsp;</p>\n<p>This only seems to happen, when setting the DataContext in some way. I wanted to bind the isOpen property to my Viewmodel, so i could hide and show the control</p>",
+    "PostedDate": "2011-09-19T04:34:41.62-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

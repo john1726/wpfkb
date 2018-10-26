@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "272686",
+    "ThreadId": "79636",
+    "Html": "<p>I'd just like to start by saying this is an incredibly well done done application. The commenting is extensive and the apps general organization is impeccable!</p>\r\n<p>My question is, where in the code you target the window where the text will be sent, or in other words, the window / control that will receive the message sent. I have been all through both the Touch Screen Keyboard source and the InputSimulator source but am not able to find where this is done. I was expecting something like FindWindow or something or maybe a setting for the Keyboard to make it not take focus, thus keeping the last application with focus on top but have found nothing. Anyway, any direction you can point me will be greatly appreciated.</p>\r\n<p>&nbsp;</p>\r\n<p>Once again, great application!!!!!!</p>\r\n<p>&nbsp;</p>\r\n<p>k.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-03T18:38:18.75-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "275520",
+    "ThreadId": "79636",
+    "Html": "<p>Hi there,</p>\r\n<p>Thanks for the feedback.&nbsp; The original intent of this keyboard implementation was to provide input to the same application, not as a replacement for the integrated touch screen keyboard in windows. That being said there may a way to stop the keyboard window from taking focus away from the intended target window, but I'd need to have a look.&nbsp; Feel free to do so yourself too...&nbsp; ;)</p>\r\n<p>Mike</p>",
+    "PostedDate": "2010-01-10T21:33:46.073-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "275614",
+    "ThreadId": "79636",
+    "Html": "<p>great sample, feel free to investigate commercial touch screen keyboard here <a href=\"http://fpscomponents.com/Product.aspx?id=8\">http://fpscomponents.com/Product.aspx?id=8</a></p>\r\n<p>it has more features, as it works as windows embedded one, or can be built in your WPF application.&nbsp;</p>\r\n<p>also there's layout creator tool for end user to be able to create any kind of layout, along with any language user installed on PC, &nbsp;also you can use any theme.&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-11T03:20:18.3-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "275800",
+    "ThreadId": "79636",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>michaelnoonan wrote:</strong><br>\r\n<p>Hi there,</p>\r\n<p>Thanks for the feedback.&nbsp; The original intent of this keyboard implementation was to provide input to the same application, not as a replacement for the integrated touch screen keyboard in windows. That being said there may a way to stop the keyboard window from taking focus away from the intended target window, but I'd need to have a look.&nbsp; Feel free to do so yourself too...&nbsp; ;)</p>\r\n<p>Mike</p>\r\n</blockquote>\r\n<p>&nbsp;Actually, what I meant to say is that your application is already doing what I want it to do, I just can't find where in the code you are doing it. After a few hours of running your code in debug, it seems like you aren't actually targeting the last application, it&nbsp; is just a nice side effect from the floating popup the keyboard is contained in. Would you say that is accurate?</p>\r\n<p>The behaviour I am observing is the following:</p>\r\n<ul>\r\n<li>Open Notepad and minimize.</li>\r\n<li>Open Internet Explorer and minimize.</li>\r\n<li>Open WPF Keyboard.</li>\r\n<li>WPF Keyboard window&nbsp;opens maximized with the Keyboard floating in a popup window.</li>\r\n<li>Test #1\r\n<ul>\r\n<li>Click cursor in the Windows&nbsp;Taskbar search text field.</li>\r\n<li>Click variety of keys on WPF Keyboard</li>\r\n<li>PASSED (keystrokes appear in textbox)</li>\r\n</ul>\r\n</li>\r\n<li>Test #2\r\n<ul>\r\n<li>De-Minimize Notepad. (Notepad appears between WPF Keyboard parent window and floating keyboard)</li>\r\n<li>Click variety of keys on WPF Keyboard</li>\r\n<li>PASSED (keystrokes appear in Notepad)</li>\r\n</ul>\r\n</li>\r\n<li>Test #3\r\n<ul>\r\n<li>De-Minimize Internet Explorer. (Explorer appears between WPF Keyboard parent window and floating keyboard)</li>\r\n<li>Click cursor in Explorer's Address Bar</li>\r\n<li>Click variety of keys on WPF Keyboard</li>\r\n<li>PASSED (keystrokes appear in Explorer's Address Bar)</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<p>Question is, how are you doing this? The target app (Notepad, Explorer, etc.) seem to keep focus between clicks of keys on the WPF Keyboard and I am not able to find any code explicitly doing this. If this is just a behavior borne out of the native&nbsp;Popup window, great, if not, any hints to where this is happening in code would be greatly appreciated...</p>\r\n<p>Thanks</p>\r\n<p>k.</p>\r\n<p>P.S. - Any plans on simulating an on screen mouse? Movement and all...</p>",
+    "PostedDate": "2010-01-11T11:07:27.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "428145",
+    "ThreadId": "79636",
+    "Html": "<p>Hi k.</p>\r\n<p>Sorry I didn't reply. &nbsp;I lost the email in a pile of others.</p>\r\n<p>Glad to hear everything is working how you'd hope, even if it is by the magic of the popup primitive control in WPF... :)</p>\r\n<p>A few of us are working on adding mouse simulation to the underlying inputsimulator project that is used by the wpfkb project. &nbsp;This release will also add the ability to use the InputSimulator in Dependency Injection (IoC situations) and provide for a better testing experience.</p>\r\n<p>Kind Regards,<br>Mike&nbsp;</p>",
+    "PostedDate": "2010-04-06T22:35:15.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

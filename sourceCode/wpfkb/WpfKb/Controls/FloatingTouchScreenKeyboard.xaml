@@ -1,4 +1,4 @@
-﻿<Popup
+﻿<primitives:Popup
     x:Class="WpfKb.Controls.FloatingTouchScreenKeyboard"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,38 +6,41 @@
     xmlns:WpfKb="clr-namespace:WpfKb"
     xmlns:Controls="clr-namespace:WpfKb.Controls"
     xmlns:Behaviors="clr-namespace:WpfKb.Behaviors"
+    xmlns:data="clr-namespace:System.Windows.Data;assembly=PresentationFramework"
+    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=PresentationFramework"
+    xmlns:primitives="clr-namespace:System.Windows.Controls.Primitives;assembly=PresentationFramework"
     x:Name="keyboard"
-    DataContext="{Binding ElementName=keyboard}"
+    DataContext="{data:Binding ElementName=keyboard}"
     Placement="Center"
     AllowsTransparency="True"
     HorizontalOffset="0"
     VerticalOffset="0"
     >
-    <Grid x:Name="LayoutGrid">
+    <controls:Grid x:Name="LayoutGrid">
         <Interactivity:Interaction.Behaviors>
             <Behaviors:AutoHideBehavior
-                AreAnimationsEnabled="{Binding AreAnimationsEnabled}"
-                IsShown="{Binding IsKeyboardShown, Mode=TwoWay}"
-                IsAllowedToHide="{Binding IsAllowedToFade}"
-                MinOpacity="{Binding MinimumKeyboardOpacity}"
-                MaxOpacity="{Binding MaximumKeyboardOpacity}"
-                HideDelay="{Binding KeyboardHideDelay}"
-                HideDuration="{Binding KeyboardHideAnimationDuration}"
-                ShowDuration="{Binding KeyboardShowAnimationDuration}"
+                AreAnimationsEnabled="{data:Binding AreAnimationsEnabled}"
+                IsShown="{data:Binding IsKeyboardShown, Mode=TwoWay}"
+                IsAllowedToHide="{data:Binding IsAllowedToFade}"
+                MinOpacity="{data:Binding MinimumKeyboardOpacity}"
+                MaxOpacity="{data:Binding MaximumKeyboardOpacity}"
+                HideDelay="{data:Binding KeyboardHideDelay}"
+                HideDuration="{data:Binding KeyboardHideAnimationDuration}"
+                ShowDuration="{data:Binding KeyboardShowAnimationDuration}"
                 />
         </Interactivity:Interaction.Behaviors>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Border
+        <controls:Grid.RowDefinitions>
+            <controls:RowDefinition Height="60" />
+            <controls:RowDefinition />
+        </controls:Grid.RowDefinitions>
+        <controls:Grid.ColumnDefinitions>
+            <controls:ColumnDefinition Width="200" />
+            <controls:ColumnDefinition />
+        </controls:Grid.ColumnDefinitions>
+        <controls:Border
             x:Name="DragHandle"
-            Grid.Column="0"
+            controls:Grid.Column="0"
             BorderBrush="LightGray"
             BorderThickness="10 10 10 5"
             Background="DarkGray"
@@ -46,27 +49,29 @@
             PreviewMouseMove="DragHandle_PreviewMouseMove"
             PreviewMouseUp="DragHandle_PreviewMouseUp"
             >
-            <Viewbox>
-                <TextBlock Text="Drag to move" Style="{DynamicResource Text.Detail}">
+            <controls:Viewbox>
+                <controls:TextBlock Text="Drag to move" Style="{DynamicResource Text.Detail}">
                     <Interactivity:Interaction.Behaviors>
                         <Behaviors:AutoHideBehavior
                             ActionWhenClicked="None"
-                            IsAllowedToHide="{Binding IsDragHelperAllowedToHide}"
+                            IsAllowedToHide="{data:Binding IsDragHelperAllowedToHide}"
                             />
                     </Interactivity:Interaction.Behaviors>
-                </TextBlock>
-            </Viewbox>
-        </Border>
-        <Border
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
+                </controls:TextBlock>
+            </controls:Viewbox>
+        </controls:Border>
+        <controls:Border
+            controls:Grid.Row="1"
+            controls:Grid.ColumnSpan="2"
             Background="LightGray"
             Padding="10"
             CornerRadius="0, 10, 10, 10"
             >
             <Controls:OnScreenWebKeyboard
-                AreAnimationsEnabled="{Binding AreAnimationsEnabled}"
-                />
-        </Border>
-    </Grid>
-</Popup>
+                AreAnimationsEnabled="{data:Binding AreAnimationsEnabled}">
+                <primitives:Thumb HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="16" Height="16"
+                       DragStarted="onDragStarted" DragDelta="onDragDelta" DragCompleted="onDragCompleted"/>
+            </Controls:OnScreenWebKeyboard>
+        </controls:Border>
+    </controls:Grid>
+</primitives:Popup>

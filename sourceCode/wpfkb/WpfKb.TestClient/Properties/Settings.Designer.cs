@@ -22,5 +22,53 @@ namespace WpfKb.TestClient.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("540")]
+        public string KeyboardHeight {
+            get {
+                return ((string)(this["KeyboardHeight"]));
+            }
+            set {
+                this["KeyboardHeight"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1215")]
+        public string KeyboardWidth {
+            get {
+                return ((string)(this["KeyboardWidth"]));
+            }
+            set {
+                this["KeyboardWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public string KeyboardLeft {
+            get {
+                return ((string)(this["KeyboardLeft"]));
+            }
+            set {
+                this["KeyboardLeft"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public string KeyboardTop {
+            get {
+                return ((string)(this["KeyboardTop"]));
+            }
+            set {
+                this["KeyboardTop"] = value;
+            }
+        }
     }
 }

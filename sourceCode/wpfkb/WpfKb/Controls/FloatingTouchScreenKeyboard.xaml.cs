@@ -1,7 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
+using WpfKb.Properties;
 
 namespace WpfKb.Controls
 {
@@ -139,6 +142,7 @@ namespace WpfKb.Controls
         protected override void OnClosed(EventArgs e)
         {
             IsKeyboardShown = false;
+            Settings.Default.Save();
             base.OnClosed(e);
         }
 
@@ -177,5 +181,28 @@ namespace WpfKb.Controls
             IsAllowedToFade = _isAllowedToFadeValueBeforeDrag;
         }
 
+        private void onDragStarted(object sender, DragStartedEventArgs e)
+        {
+            Thumb t = (Thumb)sender;
+            t.Cursor = Cursors.Hand;
+        }
+
+        private void onDragDelta(object sender, DragDeltaEventArgs e)
+        {
+            double yadjust = this.Height + e.VerticalChange;
+            double xadjust = this.Width + e.HorizontalChange;
+
+            if ((xadjust >= 0) && (yadjust >= 0))
+            {
+                this.Width = xadjust;
+                this.Height = yadjust;
+            }
+        }
+
+        private void onDragCompleted(object sender, DragCompletedEventArgs e)
+        {
+            Thumb t = (Thumb)sender;
+            t.Cursor = null;
+        }
     }
 }

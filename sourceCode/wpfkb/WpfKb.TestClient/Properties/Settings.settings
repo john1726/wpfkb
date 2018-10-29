@@ -1,7 +1,18 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WpfKb.TestClient.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KeyboardHeight" Type="System.String" Scope="User">
+      <Value Profile="(Default)">540</Value>
+    </Setting>
+    <Setting Name="KeyboardWidth" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1215</Value>
+    </Setting>
+    <Setting Name="KeyboardLeft" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="KeyboardTop" Type="System.String" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
